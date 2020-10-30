@@ -21,7 +21,7 @@ const LoginContainer = () => {
       // add your custom logo to your signing/register widget here.
       i18n: {
         en: {
-          'primaryauth.title': 'WAT THE HECK IS THISSS',
+          'primaryauth.title': 'Welcome to Labs',
           // change title for your app
         },
       },
