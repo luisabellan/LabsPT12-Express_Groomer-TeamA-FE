@@ -1,5 +1,7 @@
+/* eslint-disable no-undef */
 import React, { useState, useEffect } from 'react';
 import { Row, Col, Modal, Button, Breadcrumb, Form, Input } from 'antd';
+import { Marker } from 'google-maps-react';
 import MyMap from '../../../components/MyMap/MyMap';
 import './style.css';
 
@@ -216,7 +218,17 @@ export const RenderGroomerProfile = props => {
                 lat: props.latitude,
                 lng: props.longitude,
               }}
-            />
+            >
+              <Marker
+                name={'Your position'}
+                position={{ lat: 37.762391, lng: -122.439192 }}
+                icon={{
+                  // url: "/path/to/custom_icon.png",
+                  anchor: new google.maps.Point(32, 32),
+                  scaledSize: new google.maps.Size(64, 64),
+                }}
+              ></Marker>
+            </MyMap>
           </div>
         </Col>
       </Row>
