@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { useForm } from 'react-hook-form';
-import { Input, Field } from 'antd';
+import { Form, Input, Button, Radio } from 'antd';
 import 'antd/dist/antd.css';
 // import Autocomplete from 'react-google-autocomplete';
 import { registerCustomer } from '../../../api/index';
@@ -48,7 +48,7 @@ const CustomerRegistration = props => {
       <h1>Customer Registration</h1>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Field htmlFor="name">Name: </Field>
+        <Form.Item htmlFor="name">Name: </Form.Item>
 
         {/* use aria-invalid to indicate field contain error for screen reader users*/}
         <Input
@@ -69,7 +69,7 @@ const CustomerRegistration = props => {
           <span role="alert">Max length exceeded</span>
         )}
 
-        <Field htmlFor="lastname">Last Name: </Field>
+        <Form.Item htmlFor="lastname">Last Name: </Form.Item>
         <Input
           type="text"
           id="lastname"
@@ -88,7 +88,7 @@ const CustomerRegistration = props => {
           <span role="alert">Max length exceeded</span>
         )}
 
-        <Field htmlFor="phone">Phone: </Field>
+        <Form.Item htmlFor="phone">Phone: </Form.Item>
 
         <Input
           type="text"
@@ -108,7 +108,7 @@ const CustomerRegistration = props => {
           <span role="alert">Max length exceeded</span>
         )}
 
-        <Field htmlFor="address">Address: </Field>
+        <Form.Item htmlFor="address">Address: </Form.Item>
 
         <Input
           type="text"
@@ -143,7 +143,7 @@ const CustomerRegistration = props => {
           <span role="alert">Max length exceeded</span>
         )}
 
-        <Field htmlFor="city">City: </Field>
+        <Form.Item htmlFor="city">City: </Form.Item>
 
         <Input
           type="text"
@@ -163,7 +163,7 @@ const CustomerRegistration = props => {
           <span role="alert">Max length exceeded</span>
         )}
 
-        <Field htmlFor="state">State: </Field>
+        <Form.Item htmlFor="state">State: </Form.Item>
 
         <Input
           type="text"
@@ -183,7 +183,7 @@ const CustomerRegistration = props => {
           <span role="alert">Max length exceeded</span>
         )}
 
-        <Field htmlFor="country">Country: </Field>
+        <Form.Item htmlFor="country">Country: </Form.Item>
         <Input
           type="text"
           id="country"
@@ -202,7 +202,7 @@ const CustomerRegistration = props => {
           <span role="alert">Max length exceeded</span>
         )}
 
-        <Field htmlFor="zipcode">Zipcode: </Field>
+        <Form.Item htmlFor="zipcode">Zipcode: </Form.Item>
 
         <Input
           type="text"
@@ -222,7 +222,7 @@ const CustomerRegistration = props => {
           <span role="alert">Max length exceeded</span>
         )}
 
-        <Field htmlFor="description">Description: </Field>
+        <Form.Item htmlFor="description">Description: </Form.Item>
 
         <Input
           type="text"
@@ -241,7 +241,7 @@ const CustomerRegistration = props => {
         {errors.description && errors.description.type === 'maxLength' && (
           <span role="alert">Max length exceeded</span>
         )}
-        <Field htmlFor="photoUrl">Photo URL: </Field>
+        <Form.Item htmlFor="photoUrl">Photo URL: </Form.Item>
 
         <Input
           type="text"
