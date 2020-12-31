@@ -21,7 +21,7 @@ const LoginContainer = props => {
       // add your custom logo to your signing/register widget here.
       i18n: {
         en: {
-          'primaryauth.title': 'Welcome to Groomers Express Login',
+          'primaryauth.title': 'Groomers Express',
           // change title for your app
         },
       },
